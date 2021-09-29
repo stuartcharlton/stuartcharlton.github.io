@@ -5,63 +5,194 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Stu Charlton</title>
     <meta name="viewport" content="width=device-width">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers:400,400i,700">
     <style type="text/css">      
       body {
-        text-align: center;
         background: #f1f1f1;
-        font-family: Ariel, Helvetica, sans-serif;
-      }
-      p {
-        width: 10rem;
-        border-radius: 100%;
-        line-height: 10rem;
+        color: #444;
+        font-family: Verdana, sans-serif;
+        line-height: 1.5;
         margin: 0;
-        border: 2rem #ddd solid;
-        display: inline-block;
-        transform: translateY(-45%);
+        padding: 40px 30px;
+        height: 100vh;
+        box-sizing: border-box;
+        display: flex;
+      }
+      .wrapper {
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+      }
+      .about {
+        padding-bottom: 30px;
+      }
+      .blog-item {
+        padding-top: 30px;
+      }
+      .blog-item:last-child {
+        margin-bottom: 50px;
+      }
+      .blog-item__title {
+        margin: 0 0 .2rem;
+      }
+      .blog-item__desc {
+        margin: 0;
+      }
+      h1,h2 {
+        font-family: 'Bangers', serif;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      h1 {
+        font-size: 3rem;
+        line-height: 1.1;
+        margin: 10px 0 0;
+      }
+      h2 {
+        margin: 0 0 -10px;
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1rem;
+        margin: 0;
+      }
+      img {
+        border-radius: 100%;
       }
       a {
+        font-weight: bold;
         text-decoration: none;
-        color: inherit;
-        display: block;
-        background: #ffdb4c;
-        border-radius: 100%;
-        transition: background-color 0.5s ease;
-      }
-      .visuallyhidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-      }
-      a:after {
-        content: "¯\\_(ツ)_/¯";
+        color: #ad417e;
       }
       a:hover, a:focus {
-        background: #eeca3b;
+        text-decoration: underline;
+      }
+      @media screen and (min-width: 450px) and (max-width: 899px) {
+        img {
+          float: right;
+          margin-left: 10px;
+        }
+        .wrapper {
+          max-width: 500px;
+        }        
+      }
+      @media screen and (min-width: 900px) {
+        .about {
+          float: left;
+          width: 30%;
+          text-align: center;
+        }
+        .about__inner {
+          width: 90%;
+          max-width: 280px;
+          margin: auto;
+        }
+        .blog {
+          float: right;
+          width: 65%;
+        }
+        .blog-wrap {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -30px;
+        }
+        .blog-item {
+          width: 50%;
+          min-width: 50%;
+          max-width: 50%;
+          padding-left: 30px;
+          box-sizing: border-box;
+        }
       }
     </style>
   </head>
   <body>
-  <h1 class="visuallyhidden">
-    Stu Charlton is a Mackem web designer & developer, living in Bristol, UK.
-  </h1>
-    <p>
-      <a href="https://twitter.com/stuccharlton">
-        <span class="visuallyhidden">
-          @stuccharlton
-        </span>
-      </a>
-    </p>
+    <div class="wrapper">
+      <section class="about"><div class="about__inner">
+        <img src="stu-charlton.jpeg" />
+        <h1>
+          Stu Charlton
+        </h1>
+        <p>
+          I work at <a href="https://www.cxpartners.co.uk">cxpartners</a>, where I lead a group of researchers, designers and coders who solve knotty problems for financial services firms.
+        </p>
+        <p>
+          <a href="https://twitter.com/stuccharlton">Twitter</a> | 
+          <a href="https://www.linkedin.com/in/stuartcharlton/">LinkedIn</a>
+        </p>
+      </div></section>
+      <section class="blog">
+        <h2>
+          Musings
+        </h2>
+        <div class="blog-wrap">
+          <article class="blog-item">
+            <h3 class="blog-item__title">
+              <a href="https://www.cxpartners.co.uk/our-thinking/designing-financial-services-a-different-mindset/">
+                It's time for a different approach to design in financial services
+              </a>
+            </h3>  
+            <p class="blog-item__desc">
+              When risk of buyer's remorse is high, getting product selection right requires a different mentality and different tools from the 'don't make me think' approach that most UX follows.
+            </p>
+          </article>
+          <article class="blog-item">
+            <h3 class="blog-item__title">
+              <a href="https://www.cxpartners.co.uk/our-thinking/trust-why-customers-ignore-offers-to-help">
+                Why are customers ignoring offers to help?
+              </a>
+            </h3>  
+            <p class="blog-item__desc">
+              Financial services firms urgently need to talk to their most vulnerable customers. But often those customers don’t trust them enough to respond. How can you fix a broken dialogue?
+            </p>
+          </article>
+          <article class="blog-item">
+            <h3 class="blog-item__title">
+              <a href="https://www.cxpartners.co.uk/our-thinking/culture-a-competitive-advantage-that-lasts">
+                Culture: how to create a competitive advantage that lasts
+              </a>
+            </h3>  
+            <p class="blog-item__desc">
+              Focusing on customers is proven to unite businesses. There's one staggeringly simple thing you can do to kick start the change.
+            </p>
+          </article>
+          <article class="blog-item">
+            <h3 class="blog-item__title">
+              <a href="https://www.cxpartners.co.uk/our-thinking/great-design-calls-for-a-new-relationship">
+                Great design calls for a new relationship
+              </a>
+            </h3>  
+            <p class="blog-item__desc">
+              The trust necessary for successful collaboration is often missing from client-vendor relationships, but experience shows that there is a better way!
+            </p>
+          </article>
+          <article class="blog-item">
+            <h3 class="blog-item__title">
+              <a href="https://www.cxpartners.co.uk/our-thinking/exclusive-design-excludes-real-people">
+                Exclusive design excludes real people
+              </a>
+            </h3>  
+            <p class="blog-item__desc">
+              Consumers in vulnerable circumstances are not edge cases. The FCA believes that 50% of us may have a “vulnerability” affecting how we manage our money. 
+            </p>
+          </article>
+          <article class="blog-item">
+            <h3 class="blog-item__title">
+              <a href="https://www.cxpartners.co.uk/our-thinking/user-stories-so-what">
+                User stories – so what?
+              </a>
+            </h3>  
+            <p class="blog-item__desc">
+              Time is all we have. And at work – where people pay us for our time – it is also someone’s money. We should use it wisely.
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-41139035-1']);
-      _gaq.push(['_trackPageview']);
-    
+      _gaq.push(['_trackPageview']);    
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
