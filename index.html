@@ -30,6 +30,9 @@
       .blog-item {
         padding-top: 30px;
       }
+      .blog-item:first-child {
+        padding-top: 0px;
+      }
       .blog-item:last-child {
         margin-bottom: 50px;
       }
@@ -68,6 +71,18 @@
       a:hover, a:focus {
         text-decoration: underline;
       }
+      .visually-hidden {
+        position: absolute;
+      	position: absolute !important;
+      	width: 1px !important;
+      	height: 1px !important;
+      	padding: 0 !important;
+      	margin: -1px !important;
+      	overflow: hidden !important;
+      	clip: rect(0,0,0,0) !important;
+      	white-space: nowrap !important;
+      	border: 0 !important;
+      }
       @media screen and (min-width: 450px) and (max-width: 899px) {
         img {
           float: right;
@@ -78,6 +93,10 @@
         }        
       }
       @media screen and (min-width: 900px) {
+        body {
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
         .about {
           float: left;
           width: 30%;
@@ -103,6 +122,10 @@
           max-width: 50%;
           padding-left: 30px;
           box-sizing: border-box;
+          padding-top: 0px;
+        }
+        .blog-item:nth-child(n+3) {
+          padding-top: 50px;
         }
       }
     </style>
@@ -125,7 +148,7 @@
         </p>
       </div></section>
       <section class="blog">
-        <h2>
+        <h2 class="visually-hidden">
           Musings
         </h2>
         <div class="blog-wrap">
